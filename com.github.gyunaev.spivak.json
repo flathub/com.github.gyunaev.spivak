@@ -4,24 +4,25 @@
     "rename-desktop-file": "spivak.desktop",
     "rename-icon": "spivak",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.10",
+    "runtime-version": "5.11",
     "sdk": "org.kde.Sdk",
     "finish-args":[
-	"--socket=pulseaudio",
-	"--socket=wayland",
-	"--socket=x11",
-	"--share=ipc",
-	"--share=network",
-	"--device=dri"
+		"--socket=pulseaudio",
+		"--socket=wayland",
+		"--socket=x11",
+		"--share=ipc",
+		"--share=network",
+		"--device=dri",
+		"--filesystem=xdg-music"
     ],
     "cleanup": [
-	"/include",
-	"/lib/pkgconfig",
-	"/lib64/pkgconfig",
-	"/share/doc",
-	"/share/man",
-	"*.a",
-	"*.la"
+		"/include",
+		"/lib/pkgconfig",
+		"/lib64/pkgconfig",
+		"/share/doc",
+		"/share/man",
+		"*.a",
+		"*.la"
     ],
     "modules":[
 	"shared-modules/cld2/cld2.json",
@@ -53,9 +54,9 @@
 	    "name": "spivak",
 	    "buildsystem": "qmake",
 	    "config-opts": [
-		"QMAKE_LIBDIR=/app/lib",
-		"CONFIG+=release",
-		"CONFIG-=GOOGLEBREAKPAD"
+			"QMAKE_LIBDIR=/app/lib",
+			"CONFIG+=release",
+			"CONFIG-=GOOGLEBREAKPAD"
 	    ],
 	    "sources":[
 		{
@@ -69,12 +70,12 @@
 		}
 	    ],
 	    "post-install": [
-		"mkdir -p /app/bin /app/lib/spivak/plugins /app/share/appdata /app/share/applications /app/share/icons/hicolor/64x64/apps",
-		"cp src/spivak /app/bin/spivak",
-		"cp plugins/languagedetector/plugin_langdetect.so /app/lib/spivak/plugins/plugin_langdetect.so",
-		"cp packaging/spivak.desktop /app/share/applications/spivak.desktop",
-		"cp packaging/icon.png /app/share/icons/hicolor/64x64/apps/spivak.png",
-		"cp com.github.gyunaev.spivak.appdata.xml /app/share/appdata"
+			"mkdir -p /app/bin /app/lib/spivak/plugins /app/share/appdata /app/share/applications /app/share/icons/hicolor/64x64/apps",
+			"cp src/spivak /app/bin/spivak",
+			"cp plugins/languagedetector/plugin_langdetect.so /app/lib/spivak/plugins/plugin_langdetect.so",
+			"cp packaging/spivak.desktop /app/share/applications/spivak.desktop",
+			"cp packaging/icon.png /app/share/icons/hicolor/64x64/apps/spivak.png",
+			"cp com.github.gyunaev.spivak.appdata.xml /app/share/appdata"
 	    ]
 	}
     ]
