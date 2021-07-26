@@ -44,7 +44,7 @@
 		    "sha256": "a60473ffdb7b4260c08bfa19c2ccea0438edac11193c3afbbb1f17fbcf6c6132",
 	        "x-checker-data":{
               "type":"anitya",
-              "project-id":"10649",
+              "project-id":10649,
               "url-template":"https://libzip.org/download/libzip-$version.tar.xz"
            }
 		}
@@ -61,7 +61,7 @@
 		    "sha256": "3fc79408ae1d84b406922fa9319ce005631c95ca0f34b205fad867e8b30e45b1",
 	        "x-checker-data":{
               "type":"anitya",
-              "project-id":"9265",
+              "project-id":9265,
               "url-template":"https://www.freedesktop.org/software/uchardet/releases/uchardet-$version.tar.xz"
            }
 		}
