@@ -42,8 +42,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://libzip.org/download/libzip-1.7.3.tar.xz",
-                    "sha256": "a60473ffdb7b4260c08bfa19c2ccea0438edac11193c3afbbb1f17fbcf6c6132",
+                    "url": "https://libzip.org/download/libzip-1.8.0.tar.xz",
+                    "sha256": "f0763bda24ba947e80430be787c4b068d8b6aa6027a26a19923f0acfa3dac97e",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 10649,
@@ -84,6 +84,7 @@
                     "type": "git",
                     "url": "https://github.com/gyunaev/spivak.git",
                     "tag": "1.4",
+                    "commit": "8fa316e1c9820d5462412f6f6f0d25f7398cb3b8",
                     "x-checker-data": {
                         "type": "git",
                         "tag-pattern": "^([\\d.]+)$"
