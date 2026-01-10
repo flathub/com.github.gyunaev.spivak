@@ -4,12 +4,12 @@
     "rename-desktop-file": "spivak.desktop",
     "rename-icon": "spivak",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.15",
+    "runtime-version": "5.15-25.08",
     "sdk": "org.kde.Sdk",
     "finish-args": [
         "--socket=pulseaudio",
         "--socket=wayland",
-        "--socket=x11",
+        "--socket=fallback-x11",
         "--share=ipc",
         "--share=network",
         "--device=dri",
@@ -27,13 +27,6 @@
     "modules": [
         "shared-modules/cld2/cld2.json",
         {
-            "name": "cld2-symlink",
-            "buildsystem": "simple",
-            "build-commands": [
-                "ln -s /app/lib/*/libcld2.so /app/lib"
-            ]
-        },
-        {
             "name": "libzip",
             "buildsystem": "cmake",
             "cleanup": [
@@ -42,8 +35,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://libzip.org/download/libzip-1.8.0.tar.xz",
-                    "sha256": "f0763bda24ba947e80430be787c4b068d8b6aa6027a26a19923f0acfa3dac97e",
+                    "url": "https://libzip.org/download/libzip-1.11.4.tar.xz",
+                    "sha256": "8a247f57d1e3e6f6d11413b12a6f28a9d388de110adc0ec608d893180ed7097b",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 10649,
@@ -55,14 +48,15 @@
         {
             "name": "uchardet",
             "buildsystem": "cmake",
+            "config-opts": [ "-DCMAKE_POLICY_VERSION_MINIMUM=3.5" ],
             "cleanup": [
                 "/bin"
             ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://www.freedesktop.org/software/uchardet/releases/uchardet-0.0.7.tar.xz",
-                    "sha256": "3fc79408ae1d84b406922fa9319ce005631c95ca0f34b205fad867e8b30e45b1",
+                    "url": "https://www.freedesktop.org/software/uchardet/releases/uchardet-0.0.8.tar.xz",
+                    "sha256": "e97a60cfc00a1c147a674b097bb1422abd9fa78a2d9ce3f3fdcc2e78a34ac5f0",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 9265,
