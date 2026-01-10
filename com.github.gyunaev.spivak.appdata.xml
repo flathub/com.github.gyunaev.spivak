@@ -1,18 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<component type="desktop">
+<component type="desktop-application">
   <id>com.github.gyunaev.spivak</id>
   <name>Spivak</name>
-  <developer_name>George Yunaev</developer_name>
+  <developer id="io.github.gyunaev">
+    <name>George Yunaev</name>
+  </developer>
   <summary>Karaoke player</summary>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0</project_license>
   <url type="homepage">https://github.com/gyunaev/spivak</url>
+  <url type="bugtracker">https://github.com/gyunaev/spivak/issues</url>
+  <url type="vcs-browser">https://github.com/gyunaev/spivak</url>
+  <launchable type="desktop-id">com.github.gyunaev.spivak.desktop</launchable>
   <description>
   <p>Spivak has been designed to be a standalone Karaoke player, which could be used at your parties without a dedicated DJ. It is primarily controlled through its Web interface, so your guests can take care of themselves, searching and adding songs into the queue. The player will ensure fair rotation.</p>
   </description>
   <screenshots>
-    <screenshot>
+    <screenshot type="default">
       <image type="source">https://raw.githubusercontent.com/flathub/com.github.gyunaev.spivak/master/screenshots/1.png</image>
+    </screenshot>
+    <screenshot>
       <image type="source">https://raw.githubusercontent.com/flathub/com.github.gyunaev.spivak/master/screenshots/2.png</image>
     </screenshot>
   </screenshots>
